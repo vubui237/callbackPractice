@@ -114,7 +114,9 @@ uniq(names, function(uniqArr){
 
     //Code Here
     function each(names, cb) {
-      names.forEach(cb);
+      for(var i=0;i<names.length;i++) {
+        cb(names[i], i);
+      }
     }
 
 each(names, function(item, indice){
